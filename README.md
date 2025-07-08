@@ -35,11 +35,11 @@ This bot bridges the gap for those who hesitate to seek in-person counselling, p
 
 ---
 
-cd your-project-folder
-git init
-git add README.md
-git commit -m "Add project description"
-git branch -M main
+- cd your-project-folder
+- git init
+- git add README.md
+- git commit -m "Add project description"
+- git branch -M main
 git remote add origin https://github.com/your-username/ai-counselling-chatbot.git
 git push -u origin main
 
