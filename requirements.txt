@@ -1,0 +1,9 @@
+flask
+flask-socketio
+openai
+eventlet
+
+#stsrt ollama service 
+
+$env:OLLAMA_HOST="127.0.0.1:5002"
+ollama serve

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="left-bar" id="sidebar">
+            <button class="start-convo-btn">🗨️ New Chat</button>
+            <ul id="chat-history"></ul>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="right-chat-container" id="chatContainer">
+            <!-- Navbar -->
+            <div class="navbar">
+                <button class="menu-toggle" id="toggleSidebar"><i class="fas fa-bars"></i></button>
+                <h2 class="chat-header">🤖 AI Chatbot</h2>
+                <div class="nav-links-right">
+                    <a class="nav-link" href="{{ url_for('auth.login_page') }}">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                </div>
+            </div>
+
+            <!-- Chat Section -->
+            <div class="main-content">
+                <div class="chat-box" id="chat-box">
+                    <div class="bot-message">Hello! How can I assist you today?</div>
+                </div>
+
+                <div id="bot-thinking" style="display: none;" class="bot-thinking">
+                    <img src="https://media.giphy.com/media/jpVnC65m9Yqka/giphy.gif" alt="Thinking...">
+                </div>
+
+                <!-- Chat Input -->
+                <div class="chat-input-container">
+                    <button id="mic-btn" class="mic-btn"><i class="fas fa-microphone"></i></button>
+                    <input type="text" id="user-input" placeholder="Type a message..." autofocus>
+                    <button class="send-btn" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+</body>
+
+</html>
